@@ -26,7 +26,7 @@ function sumOfNumber(dob)
    
 }
 function checkLucky(sum,luckyNumber)
-{
+{   
     if(sum%luckyNumber==0)
     {
         messageDisplay.innerText ="your birthday is lucky 😘"
