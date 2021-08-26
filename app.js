@@ -3,15 +3,19 @@ var luckyNumber =document.querySelector("#lucky-number");
 var checkBtn = document .querySelector("#check-button");
 var messageDisplay =document.querySelector("#message");
 
-checkBtn.addEventListener("click", function clickHanlder()
+function checkBirthdayLucky()
 {
     var dob = dateOfBirth.value;
     // console.log(dob);
       var sum =sumOfNumber(dob);
+      if(sum&&dob)
       checkLucky(sum,luckyNumber.value);
+      else
+      messageDisplay.innerText ="please enter both the fields😠"
 
 
-});
+
+}
 function sumOfNumber(dob)
 {
     var dob= dob.replaceAll("-","");
@@ -35,3 +39,4 @@ function checkLucky(sum,luckyNumber)
         messageDisplay.innerText = "your birthday is not lucky 😣"
     }
 }
+checkBtn.addEventListener("click",checkBirthdayLucky);
