@@ -8,10 +8,17 @@ function checkBirthdayLucky()
     var dob = dateOfBirth.value;
     // console.log(dob);
       var sum =sumOfNumber(dob);
+    if(luckyNumber.value<0)
+    {
+        messageDisplay.innerText ="please enter positive value😠"
+    }
+    else
+    {
       if(sum&&dob)
       checkLucky(sum,luckyNumber.value);
       else
       messageDisplay.innerText ="please enter both the fields😠"
+    }
 
 
 
